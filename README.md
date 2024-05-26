@@ -4,7 +4,7 @@ O programa vem sem a fundação, para a criares corre o ficheiro batch **start.b
 
 # Editar o Programa!
 
-Para editares o programa tens de dar  *'git clone [link do github](https://github.com/rafaelantunes04/ProjetoFinalEWMN.git)'* na teu terminal de perferencia, pessoalmente uso [MINGW64](https://git-scm.com/downloads), que vem ao instalar git. De seguida fazes as alterações que achares nessessárias, escreves: *' git add . ' , ' git commit -m "Mensagem" ' e ' git push '*.
+Para editares o programa tens de dar  *'git clone [link do github](https://github.com/rafaelantunes04/ProjetoFinalEWMN.git)'* na teu terminal de perferencia, pessoalmente uso [MINGW64](https://git-scm.com/downloads), que vem ao instalar git. De seguida fazes as alterações que achares nessessárias, escreves: *' git add . ' , ' git commit -m "Mensagem" ' e ' git push ' ou ' git push origin master'*, usando esta final apenas se a anterior der erro.
 
 > Antes de fazeres qualquer alteração fala comigo para ver se ja não existe outra alteração minha que não tenha dado update e vice versa.
 
