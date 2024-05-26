@@ -8,4 +8,9 @@ Para editares o programa tens de dar  *'git clone [link do github](https://githu
 
 > Antes de fazeres qualquer alteração fala comigo para ver se ja não existe outra alteração minha que não tenha dado update e vice versa.
 
+# Para dar Update
+
+Para dar update das *' git pull ' , ' git pull origin master '* usando apenas o segundo caso o primeiro der erro, atenção que ao fazer algum destes comandos vai substituir **TUDO** o que tens na diretoria atual pelo presente no github.
+
+
 Bom trabalho!
