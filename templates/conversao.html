@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Conversão</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="width: 19%;">
+                <a href="homepage.html" class="navbar">Home</a>
+            </li>
+            <li style="width: 21%;">
+                <a href="gray.html" class="navbar">Gray</a>
+            </li>
+            <li style="width: 29%; background-color: gray;">
+                <a href="conversao.html" class="navbar">Conversão</a>
+            </li>
+            <li style="width: 31%;">
+                <a href="operacoes.html" class="navbar">Operações</a>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="title">Conversão entre Bases Numéricas</h1>
+    <h1 class="subtitulo">Binária, Decimal e Hexadecimal</h1>
+    <h1 class="corpo">Quer Converter de 
+        <select>
+            <option disabled selected hidden></option>
+            <option>Binário</option>
+            <option>Decimal</option>
+            <option>Hexadecimal</option>
+        </select>
+        para
+        <select>
+            <option disabled selected hidden></option>
+            <option>Binário</option>
+            <option>Decimal</option>
+            <option>Hexadecimal</option>
+        </select>
+    </h1>
+    <h1 class="subcorpo">Numero: <input type="text" style="padding-right: 20px;"> Resultado: <input type="text" readonly value="" ></h1>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5%;">
+        <h3 style="display: none;">Ocorreu um erro</h3>
+    </div>
+</body>
+</html>
