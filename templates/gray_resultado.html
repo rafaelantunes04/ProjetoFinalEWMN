@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Tabelas Gray</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="width: 19%;">
+                <a href="/" class="navbar">Home</a>
+            </li>
+            <li style="width: 21%; background-color: gray;">
+                <a href="/gray" class="navbar">Gray</a>
+            </li>
+            <li style="width: 29%;">
+                <a href="/conversao" class="navbar">Conversão</a>
+            </li>
+            <li style="width: 31%;">
+                <a href="/operacoes" class="navbar">Operações</a>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="title">Tabelas de Gray</h1>
+    <h1 class="subtitulo" id="subtitulo">de n bits</h1>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5%;">
+        <button><a href="/gray" class="navbar" style="display: fixed;">Voltar</a></button>
+        <div id="tables-container" style="padding-top: 2%;"></div>
+        <script>
+            let tabela = "{{ resultado }}";
+            let stringsize = tabela.length - 1;
+            while( stringsize != tabela.length) {
+                stringsize = tabela.length;
+                tabela = tabela.replace("&#39;", '"');
+            }
+            tabela = JSON.parse(tabela);
+            document.getElementById("subtitulo").textContent = `de ${tabela[0].length} bits`;
+
+
+            function createTable(values, tableNumber) {
+                const table = document.createElement('table');
+                const headerRow = document.createElement('tr');
+                const headerIndex = document.createElement('th');
+                const headerValue = document.createElement('th');
+                headerIndex.textContent = 'Numero';
+                headerValue.textContent = 'Codigo';
+                headerRow.appendChild(headerIndex);
+                headerRow.appendChild(headerValue);
+                table.appendChild(headerRow);
+                values.forEach((value, index) => {
+                    const row = document.createElement('tr');
+                    const cellIndex = document.createElement('td');
+                    const cellValue = document.createElement('td');
+                    cellIndex.textContent = index + (tableNumber * 10);
+                    cellValue.textContent = value;
+                    row.appendChild(cellIndex);
+                    row.appendChild(cellValue);
+                    table.appendChild(row);
+                });
+
+                return table;
+            }   
+
+        function populateTables(values) {
+            const container = document.getElementById('tables-container');
+
+            const numberOfTables = 1;
+            const valuesPerTable = Math.ceil(values.length / numberOfTables);
+
+            for (let i = 0; i < numberOfTables; i++) {
+                const startIndex = i * valuesPerTable;
+                const endIndex = startIndex + valuesPerTable;
+                const tableValues = values.slice(startIndex, endIndex);
+
+                const table = createTable(tableValues, i);
+                container.appendChild(table);
+            }
+        }
+
+        populateTables(tabela);
+        </script>
+    </div>
+</body>
+</html>

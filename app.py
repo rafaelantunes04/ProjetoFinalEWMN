@@ -4,8 +4,23 @@ from conversoes import *
 app = Flask(__name__)
 
 @app.route("/")
-def index():
+def homepage():
     return render_template("homepage.html")
+
+@app.route("/gray", methods=["GET", "POST"])
+def gray():
+    return render_template("gray.html")
+
+@app.route("/gray_resultado")
+def gray_resultado():
+    bits = request.args.get("bits")
+    if not bits:
+        bits = 0
+    tabela = criar_tabela_gray(int(bits))
+    if tabela[0] == "erro":
+        print("erro")
+    else:
+        return render_template("gray_resultado.html", resultado=tabela)
 
 @app.route("/calcular", methods=["POST"])
 def calcular():
@@ -13,14 +28,6 @@ def calcular():
     valor2 = int(request.form["valor2"])
     resultado = valor1 + valor2
     return render_template("result.html", resultado=resultado)
-
-@app.route("/gray", methods=["GET", "POST"])
-def gray():
-    resultado = ''
-    if request.method == 'POST':
-        bits = int(request.form["bits"])
-        resultado = criar_tabela_gray(bits)
-    return render_template("gray.html", resultado=resultado)
 
 @app.route("/conversao", methods=["GET", "POST"])
 def conversao():
