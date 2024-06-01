@@ -44,10 +44,17 @@
             </select>
         </h1>
         <h1 class="subcorpo">Número: <input type="text" name="valor" style="padding-right: 20px;">
-        Resultado: <input type="text" readonly value="{{ resultado }}"></h1>
+        Resultado: <input id="resultado" type="text" readonly value="{{ resultado }}"></h1>
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5%;">
             <button type="submit">Converter</button>
-            <h3 style="display: none;">Ocorreu um erro</h3>
+            <h3 id="erro" style="display: none;">Ocorreu um erro</h3>
+            <script>
+                if ("{{ resultado }}" == "erro") {
+                    document.getElementById("erro").style.display = "block";
+                } else {
+                    document.getElementById("erro").style.display = "none";
+                }
+            </script>
         </div>
     </form>
 </body>

@@ -49,7 +49,14 @@
         </h1>
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5%;">
             <button type="submit">Calcular</button>
-            <h3 style="display: none;">Ocorreu um erro</h3>
+            <h3 style="display: none;" id="erro">Ocorreu um erro</h3>
+            <script>
+                if ("{{ resultado }}" == "erro") {
+                    document.getElementById("erro").style.display = "block";
+                } else {
+                    document.getElementById("erro").style.display = "none";
+                }
+            </script>
         </div>
     </form>
 </body>
