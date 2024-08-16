@@ -1,6 +1,6 @@
 # Projeto Final de Ecossistema Web Movel e na Nuvem!
 
-O programa vem sem a fundação, para a criares corre o ficheiro batch **start.bat**, ele vai detetar se tens python instalado, cujo é obrigatório ter, de seguida vai perguntar se queres criar a fundação se a já não tiveres instalada, perguntado depois se queres correr o programa, abrindo o website caso for confirmado este anteriormente (**Atenção: quando confirmado o programa correr, vai dando enter porque o terminal do windows é um pouco bugado e pode dar alguns problemas**)
+O programa vem sem a fundação, para a criares corre o ficheiro batch **start.bat**, ele vai detetar se tens python instalado, cujo é obrigatório ter, de seguida vai perguntar se queres criar a fundação se a já não tiveres instalada, perguntado depois se queres correr o programa, abrindo o website caso for confirmado este anteriormente.
 
 # Editar o Programa!
 
